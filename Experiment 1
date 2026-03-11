@@ -1,0 +1,49 @@
+Aim:- 
+To write a Python program to demonstrateAssignment/Algebraic operators, Bitwise operators, Addition and Subtraction operations and verify their results using logical expressions.
+
+Algorithm:- 
+step 1 :- Start the program.
+step 2:- Assign values a = 5 and b = 3.
+step 3:- Display headings for Algebraic, Bitwise, Addition, and Subtraction operations.
+step 4:- Use expressions to verify algebraic identities.
+step 5:- Perform bitwise operations using |, &, and ^.
+step 6:- Verify addition and subtraction using bitwise expressions.
+step 7:- Print the results as True or False.
+step 8:- Stop the program.
+
+
+code:- 
+# Values
+a = 5
+b = 3
+
+print("ASSIGNMENT / ALGEBRAIC OPERATORS")
+
+print("1:", (a+b)**2 == a*a + 2*a*b + b*b)
+print("2:", (a-b)**2 == a*a - 2*a*b + b*b)
+print("3:", (a+b)*(a+b) == 2*(a*a - b*b))
+print("4:", (a+b)*(a-b) == a*a - b*b)
+print("5:", a*a + b*b == (a+b)*(a*a - a*b + b*b))
+
+
+print("\nBITWISE OPERATIONS")
+
+print("6:", (a|b) == (a^b) + (a&b))
+print("7:", (a^(a&b)) == ((a|b)^b))
+print("8:", (b^(a&b)) == ((a|b)^a))
+print("9:", ((a&b)^(a|b)) == (a^b))
+
+
+print("\nADDITION")
+
+print("10:", (a+b) == (a|b) + (a&b))
+print("11:", (a+b) == (a^b) + 2*(a&b))
+
+
+print("\nSUBTRACTION")
+
+print("12:", (a-b) == (a^(a&b)) - ((a|b)^a))
+print("13:", (a-b) == ((a|b)^b) - ((a|b)^a))
+print("14:", (a-b) == (a^(a&b)) - (b^(a&b)))
+print("15:", (a-b) == ((a|b)^b) - (b^(a&b)))
+
