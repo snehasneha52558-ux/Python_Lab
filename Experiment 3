@@ -1,0 +1,36 @@
+Aim:- 
+To write a Python program to demonstrate different string functions such as upper(), lower(), strip(), replace(), split(), and find().
+
+algorithm:- 
+Start the program.
+Create a string variable text1 and convert it to uppercase using upper().
+Create a string variable text2 and convert it to lowercase using lower().
+Create a string with extra spaces and remove them using strip().
+Create a string and replace a word using replace().
+Create a string containing fruits and split them using split().
+Create a string and find the position of a word using find().
+Display all the results using print().
+Stop the program.
+
+code:-
+text1 = "hello"
+print("Upper:", text1.upper())
+text2 = "PYTHON"
+print("Lower:", text2.lower())
+text3 = "  hello  "
+print("Strip:", text3.strip())
+text4 = "I like apples"
+print("Replace:", text4.replace("apples", "oranges"))
+text5 = "apples, banana, mango"
+print("Split:", text5.split(", "))
+text6 = "hello world"
+print("Find:", text6.find("world"))
+
+
+output:-
+Upper: HELLO
+Lower: python
+Strip: hello
+Replace: I like oranges
+Split: ['apples', 'banana', 'mango']
+Find: 6
