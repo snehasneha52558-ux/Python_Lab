@@ -1,0 +1,54 @@
+Aim:- 
+To write a Python program to demonstrate list operations and related functions such as append(), insert(), extend(), remove(), pop(), index(), count(), sort(), reverse(), and copy().
+
+Algorithm:- 
+Start the program.
+Create a list called numbers with some elements.
+Display the original list.
+Add an element to the list using append().
+Insert an element at a specific position using insert().
+Add multiple elements using extend().
+Remove an element using remove().
+Remove the last element using pop().
+Find the index of an element using index().
+Count the occurrence of an element using count().
+Sort the list using sort().
+Reverse the list using reverse().
+Copy the list using copy().
+Display the results.
+Stop the program.
+
+Source code:-
+numbers = [10, 20, 30, 40]
+print("Original list:", numbers)
+numbers.append(50)
+print("After append(50):", numbers)
+numbers.insert(1, 15)
+print("After insert(1,15):", numbers)
+numbers.extend([60, 70])
+print("After extend([60,70]):", numbers)
+numbers.remove(30)
+print("After remove(30):", numbers)
+numbers.pop()
+print("After pop():", numbers)
+print("Index of 40:", numbers.index(40))
+print("Count of 20:", numbers.count(20))
+numbers.sort()
+print("After sort():", numbers)
+numbers.reverse()
+print("After reverse():", numbers)
+new_list = numbers.copy()
+print("Copied list:", new_list)
+
+output:- 
+Original list: [10, 20, 30, 40]
+After append(50): [10, 20, 30, 40, 50]
+After insert(1,15): [10, 15, 20, 30, 40, 50]
+After extend([60,70]): [10, 15, 20, 30, 40, 50, 60, 70]
+After remove(30): [10, 15, 20, 40, 50, 60, 70]
+After pop(): [10, 15, 20, 40, 50, 60]
+Index of 40: 3
+Count of 20: 1
+After sort(): [10, 15, 20, 40, 50, 60]
+After reverse(): [60, 50, 40, 20, 15, 10]
+Copied list: [60, 50, 40, 20, 15, 10]
