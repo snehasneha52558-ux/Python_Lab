@@ -1,0 +1,99 @@
+Aim:-
+To write a Python program to store student details using tuples and calculate total, average, and highest marks.
+
+algorithm:-
+Start the program.
+Create tuples for students containing name and marks.
+Store all student tuples inside another tuple called students.
+Use a for loop to access each student's details.
+Extract marks and calculate total, average, and highest mark.
+Display the student details and results.
+Access some tuple elements directly.
+Display the length of the tuple.
+Stop the program.
+
+code:- 
+student1 = ("Rahul", 78, 85, 90)
+student2 = ("Anita", 88, 79, 84)
+student3 = ("Kiran", 92, 81, 76)
+
+students = (student1, student2, student3)
+
+print("Student Details and Average Marks")
+print("----------------------------------")
+
+for s in students:
+    name = s[0]
+    marks1 = s[1]
+    marks2 = s[2]
+    marks3 = s[3]
+    
+    average = (marks1 + marks2 + marks3) / 3
+    
+    print("Name:", name)
+    print("Marks:", marks1, marks2, marks3)
+    print("Average Marks:", average)
+    print("---------------------------")
+
+
+student1 = ("Rahul", 78, 85, 90)
+student2 = ("Anita", 88, 79, 84)
+student3 = ("Kiran", 92, 81, 76)
+students = (student1, student2, student3)
+
+print("Student Details")
+print("-----------------------------")
+
+for s in students:
+    name = s[0]
+    m1 = s[1]
+    m2 = s[2]
+    m3 = s[3]
+
+    total = m1 + m2 + m3
+    average = total / 3
+    highest = max(m1, m2, m3)
+
+    print("Name:", name)
+    print("Marks:", m1, m2, m3)
+    print("Total Marks:", total)
+    print("Average Marks:", average)
+    print("Highest Mark:", highest)
+    print("-----------------------------")
+
+print("\nAccessing Specific Data")
+print("First student name:", student1[0])
+print("Second student marks in subject 1:", student2[1])
+
+
+print("\nTotal number of students:", len(students))
+
+output:- 
+Student Details
+-----------------------------
+Name: Rahul
+Marks: 78 85 90
+Total Marks: 253
+Average Marks: 84.33
+Highest Mark: 90
+-----------------------------
+
+Name: Anita
+Marks: 88 79 84
+Total Marks: 251
+Average Marks: 83.67
+Highest Mark: 88
+-----------------------------
+
+Name: Kiran
+Marks: 92 81 76
+Total Marks: 249
+Average Marks: 83.0
+Highest Mark: 92
+-----------------------------
+
+Accessing Specific Data
+First student name: Rahul
+Second student marks in subject 1: 88
+
+Total number of students: 3
