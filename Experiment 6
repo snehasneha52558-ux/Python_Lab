@@ -1,0 +1,67 @@
+Aim:- 
+To write a Python program to create a phonebook using a dictionary that allows the user to add, search, and display contacts.
+
+algorithm:-
+Start the program.
+Create an empty dictionary called phonebook.
+Define a function add() to add a name and phone number to the dictionary.
+Define a function search() to search for a name in the phonebook and display the phone number.
+Define a function display() to display all contacts stored in the phonebook.
+Use an infinite loop to display menu options:
+Add
+Search
+Display
+Exit
+Take the user's choice as input.
+If the choice is 1, call the add() function.
+If the choice is 2, call the search() function.
+If the choice is 3, call the display() function.
+If the choice is 4, exit the program.
+Otherwise, display Invalid choice.
+Stop the program.
+
+code:- 
+phonebook = {}
+
+def add():
+    name = input("Name: ")
+    phonebook[name] = input("Phone: ")
+
+def search():
+    name = input("Search Name: ")
+    print(phonebook.get(name, "Not found"))
+
+def display():
+    for n, p in phonebook.items():
+        print(n, "→", p)
+while True:
+    print("\n1.Add 2.Search 3.Display 4.Exit")
+    choice = input("Choice: ")
+    if choice == "1": add()
+    elif choice == "2": search()
+    elif choice == "4": break
+    else: print("Invalid choice")
+
+output:- 
+1.Add 2.Search 3.Display 4.Exit
+Choice: 1
+Name: Rahul
+Phone: 9876543210
+
+1.Add 2.Search 3.Display 4.Exit
+Choice: 1
+Name: Anu
+Phone: 9123456780
+
+1.Add 2.Search 3.Display 4.Exit
+Choice: 3
+Rahul → 9876543210
+Anu → 9123456780
+
+1.Add 2.Search 3.Display 4.Exit
+Choice: 2
+Search Name: Rahul
+9876543210
+
+1.Add 2.Search 3.Display 4.Exit
+Choice: 4
