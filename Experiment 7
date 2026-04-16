@@ -1,0 +1,149 @@
+Aim:- 
+To demonstrate OOP concepts in Python such as class, object, inheritance, and polymorphism.
+
+Algorithm:- 
+1.Start
+2.Define class Animal with attributes and methods
+3.Create objects and call methods
+4.Implement inheritance (Dog, Puppy, Cat)
+5.Add specific methods in derived classes
+6.Create objects and call inherited + own methods
+7.Implement polymorphism using Lion and Tiger with sound()
+8.Use loop and hasattr() to call methods dynamically
+9.Stop
+
+
+
+Code:- 
+class Animal:
+    def __init__(self, name, type):
+        self.name = name  
+        self.type = type   
+
+    def eat(self):
+        print(self.name, "the", self.type, "is eating")
+
+    def sleep(self):
+        print(self.name, "the", self.type, "is sleeping")
+
+
+dog = Animal("Tommy", "Dog")
+cat = Animal("Kitty", "Cat")
+
+
+dog.eat()
+dog.sleep()
+
+cat.eat()
+cat.sleep()
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(self.name, "is eating")
+
+    def sleep(self):
+        print(self.name, "is sleeping")
+
+
+a1 = Animal("GenericAnimal")
+a1.eat()
+a1.sleep()
+
+
+
+class Dog(Animal):
+    def bark(self):
+        print(self.name, "barks")
+
+d = Dog("Tommy")
+d.eat()  
+d.bark()  
+
+
+
+class Puppy(Dog):
+    def weep(self):
+        print(self.name, "weeps")
+
+p = Puppy("Buddy")
+p.eat()   
+p.bark()  
+p.weep()  
+
+
+
+class Cat(Animal):
+    def meow(self):
+        print(self.name, "meows")
+
+c = Cat("Kitty")
+c.eat()   
+c.meow() 
+
+
+class Lion(Animal):
+    def sound(self):       
+        print(self.name, "says Roar")
+
+class Tiger(Animal):
+    def sound(self):       
+        print(self.name, "says Growl")
+
+animals = [Lion("Leo"), Tiger("Tiggy"), Dog("Rocky"), Cat("Luna")]
+
+for animal in animals:
+    # Same method name, different behavior
+    if hasattr(animal, "sound"):
+        animal.sound()
+
+
+
+
+class Cat(Animal):
+    def meow(self):
+        print(self.name, "meows")
+
+c = Cat("Kitty")
+c.eat()   
+c.meow()  
+
+
+class Lion(Animal):
+    def sound(self):      
+        print(self.name, "says Roar")
+
+class Tiger(Animal):
+    def sound(self):       
+        print(self.name, "says Growl")
+
+animals = [Lion("Leo"), Tiger("Tiggy"), Dog("Rocky"), Cat("Luna")]
+
+for animal in animals:
+    if hasattr(animal, "sound"):
+        animal.sound()
+
+
+
+OUTPUT:- 
+Tommy the Dog is eating
+Tommy the Dog is sleeping
+Kitty the Cat is eating
+Kitty the Cat is sleeping
+GenericAnimal is eating
+GenericAnimal is sleeping
+Tommy is eating
+Tommy barks
+Buddy is eating
+Buddy barks
+Buddy weeps
+Kitty is eating
+Kitty meows
+Leo says Roar
+Tiggy says Growl
+Kitty is eating
+Kitty meows
+Leo says Roar
+Tiggy says Growl
