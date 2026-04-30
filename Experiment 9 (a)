@@ -1,0 +1,44 @@
+Aim:-
+To implement basic operations using NumPy and Pandas in Python
+
+Algorithm:-
+Step 1: Start the program
+Step 2: Import the required libraries:
+NumPy for numerical operations
+Pandas for data handling
+Step 3: Create a NumPy array with sample numerical values
+Step 4: Perform basic statistical operation (like mean) on the array
+Step 5:Display the result
+Step 6:Create a dataset (dictionary or list) containing sample data
+Step 7:Convert the dataset into a Pandas DataFrame
+Step 8:Display the DataFrame
+Step 9:Perform operations on the DataFrame (like calculating average of a column)
+Step 10:Display the result
+Step 11:Stop the program
+
+Code 
+import numpy as np
+import pandas as pd
+
+a = np.array([10, 20, 30])
+print("Mean:", np.mean(a))
+
+data = {
+    'Name': ['A', 'B', 'C'],
+    'Marks': [80, 90, 85]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+print("Average Marks:", df['Marks'].mean())
+
+
+output:- 
+Mean: 20.0
+  Name  Marks
+0    A     80
+1    B     90
+2    C     85
+
+Average Marks: 85.0
