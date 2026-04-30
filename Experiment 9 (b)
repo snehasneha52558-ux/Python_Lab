@@ -1,0 +1,42 @@
+Aim:- 
+To visualize data using Matplotlib by creating different types of graphs such as line graph, bar graph, and pie chart
+
+Algorithm:-
+Step 1:Start the program
+Step 2:Import the Matplotlib library (matplotlib.pyplot)
+Step 3:Prepare the data required for plotting graphs
+Step 4:Create a line graph using appropriate function (plot())
+Step 5:Add title, labels, and display the graph
+Step 6:Create a bar graph using appropriate function (bar())
+Step 7:Add title, labels, and display the graph
+Step 8:Create a pie chart using appropriate function (pie())
+Step 9:Add labels and display the chart
+Step 10:Stop the program
+
+Code:- 
+import matplotlib.pyplot as plt
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 25, 30]
+plt.plot(x, y)
+plt.xlabel("X values")
+plt.ylabel("Y values")
+plt.title("Simple Line Graph")
+plt.show()
+
+
+import matplotlib.pyplot as plt
+categories = ['A', 'B', 'C', 'D']
+values = [5, 7, 3, 8]
+plt.bar(categories, values)
+plt.xlabel("Categories")
+plt.ylabel("Values")
+plt.title("Simple Bar Graph")
+plt.show()
+
+
+import matplotlib.pyplot as plt
+sizes = [40, 25, 20, 15]
+labels = ['Python', 'Java', 'C++', 'JavaScript']
+plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+plt.title("Programming Languages Pie Chart")
+plt.show()
